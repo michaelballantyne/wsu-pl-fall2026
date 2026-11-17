@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400"
+     font-family="Menlo, Consolas, monospace" font-size="13">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="400" fill="white"/>
+
+  <g transform="translate(40,0)">
+  <circle cx="330" cy="70" r="7" fill="#222"/>
+  <line x1="333" y1="77" x2="360" y2="156" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <circle cx="380" cy="210" r="55" fill="#fde2e2" stroke="#222" stroke-width="2"/>
+  <text x="380" y="215" text-anchor="middle" font-size="16" font-weight="bold">Locked</text>
+
+  <circle cx="700" cy="210" r="55" fill="#dff3e0" stroke="#222" stroke-width="2"/>
+  <text x="700" y="215" text-anchor="middle" font-size="16" font-weight="bold">Unlocked</text>
+
+  <path d="M415,168 Q540,90 665,168" fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="540" y="64" text-anchor="middle">Coin(value)</text>
+  <text x="540" y="82" text-anchor="middle" fill="#a33">[value &gt;= FARE - accumulated_value]</text>
+  <text x="540" y="100" text-anchor="middle" fill="#555">accumulated_value = 0</text>
+
+  <path d="M332,183 C210,120 210,300 332,237" fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="226" y="205" text-anchor="end">Coin(value)</text>
+  <text x="226" y="223" text-anchor="end" fill="#555">accumulated_value += value</text>
+
+  <path d="M665,252 Q540,340 415,252" fill="none" stroke="#222" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <text x="540" y="324" text-anchor="middle">Pass() | Timeout()</text>
+
+  </g>
+
+</svg>
