@@ -6,9 +6,5 @@ edition = "2024"
 [dependencies]
 
 [[bin]]
-name = "square"
-path = "src/square.rs"
-
-[[bin]]
 name = "state_machine_demo"
 path = "src/state_machine_demo.rs"
