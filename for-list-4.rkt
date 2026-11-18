@@ -9,10 +9,11 @@
 
 (define-syntax for/list
   (syntax-rules ()
-    [(for/list ([var rhs])        ; Pattern
+    [(for/list ([var rhs] ...)        ; Pattern
        body)
-     (map (lambda (var) body)     ; Template
-          rhs)]))
+     (map (lambda (var ...) body)     ; Template
+          rhs ...)]))
+
 
 (for/list ([x '(1 2 3)])
   (+ x 1))
@@ -21,17 +22,12 @@
 
 
 
-
-
-
-
-
-
-#;#;
 ;; What if we want to iterate over multiple lists, together?
 (for/list ([expected '(1 2 3)]
            [actual   '(1 3 3)])
   (equal? expected actual))
+
+
 
 ;; Equivalent to:
 

@@ -7,6 +7,9 @@
 #;(define-syntax my-or
   TODO)
 
+;; Defininig it as a function doesn't work!
+(define (my-or a b)
+  (if a a b))
 
 ;; Examples:
 
@@ -16,19 +19,15 @@
 
 
 
-
-#;#;#;
+;; (List Integer) -> Boolean
 (define (all-positive? l)
   (my-or (empty? l)
-      (and (positive? (first l))
-           (all-positive? (rest l)))))
+         (and (positive? (first l))
+              (all-positive? (rest l)))))
+
 
 (all-positive? '(1 5 3))  ; => #t
 (all-positive? '(1 -8 3)) ; => #f
-
-
-
-
 
 
 
